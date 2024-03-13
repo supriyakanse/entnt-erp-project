@@ -10,6 +10,7 @@ This Angular application provides a simple CRUD (Create, Read, Update, Delete) f
 - [Components](#components)
 - [Services](#services)
 - [Routing](#routing)
+- [Auth Guard](#auth guard)
 - [License](#license)
 
 ## Prerequisites
@@ -76,6 +77,10 @@ Before running the application, make sure you have the following installed:
 - The application uses Angular Router for navigation between components.
 
 - Available routes include `/dashboard`, `/products`, `/orders`, `/products/:id` (product detail), `/orders/:id` (order detail), and `/products/new` (add new product).
+
+## auth guard
+- The application will not allow to add products until user visits product page.
+- The application uses local session storage for storing the flag if user visits product page
 
 ## License
 
