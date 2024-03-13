@@ -1,4 +1,5 @@
-/* product-detail.styles.css */
+
+
 
 .product-detail-container {
     max-width: 800px;
@@ -51,9 +52,11 @@
 }
 
 .product-actions button:hover {
-    background-color: #217dbb; /* Hover color for Update button */
+    background-color: #217dbb;
+    
 }
 
 .product-actions button:last-child:hover {
-    background-color: #c0392b; /* Hover color for Delete button */
+    background-color: #c0392b; 
+    
 }

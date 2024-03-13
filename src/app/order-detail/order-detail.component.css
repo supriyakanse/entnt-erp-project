@@ -1,4 +1,4 @@
-/* order-detail.styles.css */
+
 
 .order-detail-container {
     max-width: 800px;
@@ -57,7 +57,8 @@
 }
 
 .update-status-section button:hover {
-    background-color: #217dbb; /* Hover color for Update Status button */
+    background-color: #217dbb; 
+    
 }
 
 .order-actions button {
@@ -82,5 +83,6 @@
     cursor: pointer;
 }
 .order-actions button:hover {
-    background-color: #c0392b; /* Hover color for Delete Order button */
+    background-color: #c0392b; 
+    
 }

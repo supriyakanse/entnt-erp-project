@@ -22,7 +22,8 @@ export class ProductComponent {
 
   deleteProduct(id: number): void {
     this.productService.deleteProduct(id);
-    this.getProducts(); // Refresh the product list after deletion
+    this.getProducts(); 
+    
   }
 
 }

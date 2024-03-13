@@ -11,7 +11,8 @@ export class OrderService {
   private orders: Order[] = [
     { id: 1, customerName: 'Customer 1', orderDate: new Date(), status: 'Pending' },
     { id: 2, customerName: 'Customer 2', orderDate: new Date(), status: 'Shipped' },
-    // Add more mock data as needed
+  
+    
   ];
 
   getOrders(): Observable<Order[]> {

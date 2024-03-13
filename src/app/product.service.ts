@@ -12,7 +12,8 @@ export class ProductService {
   private products: Product[] = [
     { id: 1, name: 'Product 1', category: 'Category 1', price: 10.99, stockQuantity: 100 },
     { id: 2, name: 'Product 2', category: 'Category 2', price: 19.99, stockQuantity: 50 },
-    // Add more mock data as needed
+   
+    
   ];
 
   getProducts(): Observable<Product[]> {

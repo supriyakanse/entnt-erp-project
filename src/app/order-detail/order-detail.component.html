@@ -1,4 +1,5 @@
-<!-- order-detail.component.html -->
+
+
 
 <div class="order-detail-container">
   <app-nav-bar></app-nav-bar>
@@ -21,7 +22,7 @@
 
   <div class="update-status-section">
     <label for="newStatus">Update Status:</label>
-    <!-- Use a dropdown for selecting the new status -->
+    
     <select id="newStatus" [(ngModel)]="newStatus" placeholder="New Status" (change)="updateOrderStatus()">
         <option value="Shipped">Shipped</option>
         <option value="Pending">Pending</option>

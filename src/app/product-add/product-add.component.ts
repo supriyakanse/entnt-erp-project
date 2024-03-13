@@ -9,28 +9,30 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./product-add.component.css']
 })
 export class ProductAddComponent implements OnInit{
-  productForm!: FormGroup; // Define FormGroup
+  productForm!: FormGroup; 
+  
 
   constructor(
     private productService: ProductService,
     private router: Router,
-    private formBuilder: FormBuilder // Inject FormBuilder
+    private formBuilder: FormBuilder 
+    
   ) {}
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
-      name: ['', Validators.required], // Apply validators
+      name: ['', Validators.required], 
       category: ['', Validators.required],
-      price: ['', [Validators.required, Validators.min(0)]], // Add a minimum value validation
+      price: ['', [Validators.required, Validators.min(0)]], 
       stockQuantity: ['', [Validators.required, Validators.min(0)]]
     });
   }
 
   addProduct(): void {
     if (this.productForm.valid) {
-      // If the form is valid, proceed with adding the product
+      
       this.productService.getProducts().subscribe(products => {
-        // Ensure the new product has a unique ID
+        
         const newProduct: Product = {
           id: products.length + 1,
           name: this.productForm.value.name,
@@ -42,13 +44,7 @@ export class ProductAddComponent implements OnInit{
         this.productService.addProduct(newProduct);
         this.router.navigate(['/products']);
       });
-    } else {
-      // If the form is not valid, display error messages or take appropriate action
-      // You can access individual form controls' validity like this:
-      if (this.productForm.controls['name'].invalid) {
-        // Handle invalid name field
-      }
-      // Similarly, handle other fields' validity as required
-    }
+    } 
+    
   }
 }

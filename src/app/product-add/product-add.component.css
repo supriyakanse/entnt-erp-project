@@ -1,4 +1,4 @@
-/* product-add.styles.css */
+
 
 .product-add-container {
     max-width: 800px;
@@ -51,11 +51,13 @@
 }
 
 .product-actions button:hover {
-    background-color: #239655; /* Hover color for Add Product button */
+    background-color: #239655; 
+    
 }
 
 .product-actions button:last-child:hover {
-    background-color: #c0392b; /* Hover color for Cancel button */
+    background-color: #c0392b; 
+    
 }
 
 .error-msg{
