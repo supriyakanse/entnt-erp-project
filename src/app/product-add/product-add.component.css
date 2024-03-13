@@ -57,3 +57,7 @@
 .product-actions button:last-child:hover {
     background-color: #c0392b; /* Hover color for Cancel button */
 }
+
+.error-msg{
+    color: red;
+}

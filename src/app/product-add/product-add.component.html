@@ -1,30 +1,50 @@
 <!-- product-add.component.html -->
 
 <div class="product-add-container">
-<app-nav-bar></app-nav-bar>
+  <app-nav-bar></app-nav-bar>
   <h2 class="product-add-heading">Add New Product</h2>
 
-  <div class="product-form">
+  <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+    <div class="product-form">
       <div>
-          <label for="name">Name:</label>
-          <input id="name" [(ngModel)]="newProduct.name" placeholder="Name" required />
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" placeholder="Name" />
+        <div *ngIf="productForm.get('name')?.hasError('required') && productForm.get('name')?.touched">
+          <span class="error-msg">Name is required</span>
+        </div>
       </div>
       <div>
-          <label for="category">Category:</label>
-          <input id="category" [(ngModel)]="newProduct.category" placeholder="Category" required />
+        <label for="category">Category:</label>
+        <input id="category" formControlName="category" placeholder="Category" />
+        <div *ngIf="productForm.get('category')?.hasError('required') && productForm.get('category')?.touched">
+          <span class="error-msg">Category is required</span>
+        </div>
       </div>
       <div>
-          <label for="price">Price:</label>
-          <input id="price" [(ngModel)]="newProduct.price" placeholder="Price" required />
+        <label for="price">Price:</label>
+        <input id="price" formControlName="price" placeholder="Price" />
+        <div *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched">
+          <span class="error-msg">Price is required</span>
+        </div>
+        <div *ngIf="productForm.get('price')?.hasError('min') && productForm.get('price')?.touched">
+          <span class="error-msg">Price must be greater than or equal to 0</span>
+        </div>
       </div>
       <div>
-          <label for="stockQuantity">Stock Quantity:</label>
-          <input id="stockQuantity" [(ngModel)]="newProduct.stockQuantity" placeholder="Stock Quantity" required />
+        <label for="stockQuantity">Stock Quantity:</label>
+        <input id="stockQuantity" formControlName="stockQuantity" placeholder="Stock Quantity" />
+        <div *ngIf="productForm.get('stockQuantity')?.hasError('required') && productForm.get('stockQuantity')?.touched">
+          <span class="error-msg">Stock Quantity is required</span>
+        </div>
+        <div *ngIf="productForm.get('stockQuantity')?.hasError('min') && productForm.get('stockQuantity')?.touched">
+          <span class="error-msg">Stock Quantity must be greater than or equal to 0</span>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <div class="product-actions">
-      <button (click)="addProduct()">Add Product</button>
+    <div class="product-actions">
+      <button type="submit" [disabled]="!productForm.valid">Add Product</button>
       <button routerLink="/products">Cancel</button>
-  </div>
+    </div>
+  </form>
 </div>
