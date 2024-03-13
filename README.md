@@ -13,6 +13,7 @@ Deployed at - https://entnt-erp-project.vercel.app/dashboard
 - [Components](#components)
 - [Services](#services)
 - [Routing](#routing)
+- [Validations](#validation)
 - [Auth Guard](#auth guard)
 - [License](#license)
 
@@ -80,6 +81,9 @@ Before running the application, make sure you have the following installed:
 - The application uses Angular Router for navigation between components.
 
 - Available routes include `/dashboard`, `/products`, `/orders`, `/products/:id` (product detail), `/orders/:id` (order detail), and `/products/new` (add new product).
+
+##validation 
+- application has specific validations added e.g. product details form.
 
 ## auth guard
 - The application will not allow to add products until user visits product page.
