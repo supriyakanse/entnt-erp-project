@@ -1,0 +1,34 @@
+<!-- product-list.component.html -->
+
+<div class="product-list-container">
+  <app-nav-bar></app-nav-bar>
+  <h2 class="product-list-heading">Product List</h2>
+
+  <table class="product-table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock Quantity</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let product of products">
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.price | currency }}</td>
+              <td>{{ product.stockQuantity }}</td>
+              <td class="product-actions">
+                  <button routerLink="/products/{{ product.id }}">Details</button>
+                  <button (click)="deleteProduct(product.id)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <button class="add-product-button" routerLink="/add">Add Product</button>
+</div>

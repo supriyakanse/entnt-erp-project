@@ -1,0 +1,24 @@
+<div *ngIf="order">
+    <h2>Order Details</h2>
+    <div>
+      <strong>Order ID:</strong> {{ order.id }}
+    </div>
+    <div>
+      <strong>Customer Name:</strong> {{ order.customerName }}
+    </div>
+    <div>
+      <strong>Order Date:</strong> {{ order.orderDate | date:'medium' }}
+    </div>
+    <div>
+      <strong>Status:</strong> {{ order.status }}
+    </div>
+    <div>
+        <label for="newStatus">Update Status:</label>
+        <input id="newStatus" [(ngModel)]="newStatus" placeholder="New Status"/>
+        <button (click)="updateOrderStatus(newStatus)">Update Status</button>
+      </div>
+   
+  
+    <button (click)="deleteOrder()">Delete Order</button>
+  </div>
+  

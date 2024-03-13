@@ -1,0 +1,23 @@
+<!-- product-add.component.html -->
+
+<h2>Add New Product</h2>
+
+<div>
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="newProduct.name" placeholder="Name" required/>
+</div>
+<div>
+  <label for="category">Category:</label>
+  <input id="category" [(ngModel)]="newProduct.category" placeholder="Category" required/>
+</div>
+<div>
+  <label for="price">Price:</label>
+  <input id="price" [(ngModel)]="newProduct.price" placeholder="Price" required/>
+</div>
+<div>
+  <label for="stockQuantity">Stock Quantity:</label>
+  <input id="stockQuantity" [(ngModel)]="newProduct.stockQuantity" placeholder="Stock Quantity" required/>
+</div>
+
+<button (click)="addProduct()">Add Product</button>
+<button routerLink="/products">Cancel</button>

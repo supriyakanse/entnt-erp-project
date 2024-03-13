@@ -1,0 +1,25 @@
+<!-- product-detail.component.html -->
+
+<div *ngIf="product">
+    <h2>{{ product.name }} Details</h2>
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" [(ngModel)]="product.name" placeholder="Name"/>
+    </div>
+    <div>
+      <label for="category">Category:</label>
+      <input id="category" [(ngModel)]="product.category" placeholder="Category"/>
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input id="price" [(ngModel)]="product.price" placeholder="Price"/>
+    </div>
+    <div>
+      <label for="stockQuantity">Stock Quantity:</label>
+      <input id="stockQuantity" [(ngModel)]="product.stockQuantity" placeholder="Stock Quantity"/>
+    </div>
+  
+    <button (click)="updateProduct()">Update</button>
+    <button (click)="deleteProduct()">Delete</button>
+  </div>
+  
