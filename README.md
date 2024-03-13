@@ -2,6 +2,9 @@
 
 This Angular application provides a simple CRUD (Create, Read, Update, Delete) functionality for managing products and orders.
 
+##
+Deployed at - https://entnt-erp-project.vercel.app/dashboard
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
