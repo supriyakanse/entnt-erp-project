@@ -1,0 +1,86 @@
+/* order-detail.styles.css */
+
+.order-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-detail-heading {
+    color: #3498db;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.order-detail-info {
+    margin-bottom: 20px;
+}
+
+.order-detail-info div {
+    margin-bottom: 10px;
+}
+
+.order-detail-info strong {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.update-status-section {
+    margin-bottom: 20px;
+}
+
+.update-status-section label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.update-status-section input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 60%;
+}
+
+.update-status-section button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.update-status-section button:hover {
+    background-color: #217dbb; /* Hover color for Update Status button */
+}
+
+.order-actions button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.order-save button {
+    padding: 10px;
+    margin-left: 45%;
+    font-size: 1.2em;
+    background-color: #1ee699;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.order-actions button:hover {
+    background-color: #c0392b; /* Hover color for Delete Order button */
+}

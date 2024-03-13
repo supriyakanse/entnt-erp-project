@@ -1,24 +1,40 @@
-<div *ngIf="order">
-    <h2>Order Details</h2>
-    <div>
-      <strong>Order ID:</strong> {{ order.id }}
-    </div>
-    <div>
-      <strong>Customer Name:</strong> {{ order.customerName }}
-    </div>
-    <div>
-      <strong>Order Date:</strong> {{ order.orderDate | date:'medium' }}
-    </div>
-    <div>
-      <strong>Status:</strong> {{ order.status }}
-    </div>
-    <div>
-        <label for="newStatus">Update Status:</label>
-        <input id="newStatus" [(ngModel)]="newStatus" placeholder="New Status"/>
-        <button (click)="updateOrderStatus(newStatus)">Update Status</button>
-      </div>
-   
+<!-- order-detail.component.html -->
+
+<div class="order-detail-container">
+  <app-nav-bar></app-nav-bar>
+  <h2 class="order-detail-heading">Order Details</h2>
   
-    <button (click)="deleteOrder()">Delete Order</button>
+  <div class="order-detail-info">
+      <div>
+          <strong>Order ID:</strong> {{ order.id }}
+      </div>
+      <div>
+          <strong>Customer Name:</strong> {{ order.customerName }}
+      </div>
+      <div>
+          <strong>Order Date:</strong> {{ order.orderDate | date:'medium' }}
+      </div>
+      <div>
+          <strong>Status:</strong> {{ order.status }}
+      </div>
+  </div>
+
+  <div class="update-status-section">
+    <label for="newStatus">Update Status:</label>
+    <!-- Use a dropdown for selecting the new status -->
+    <select id="newStatus" [(ngModel)]="newStatus" placeholder="New Status" (change)="updateOrderStatus()">
+        <option value="Shipped">Shipped</option>
+        <option value="Pending">Pending</option>
+    </select>
+   
+</div>
+
+  <div class="order-actions">
+      <button (click)="deleteOrder()">Delete Order</button>
   </div>
   
+  <div class="order-save">
+    <button routerLink="/orders">Save</button>
+</div>
+
+</div>

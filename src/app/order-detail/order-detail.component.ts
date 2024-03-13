@@ -25,10 +25,12 @@ newStatus!:string;
       });
     });
   }
+  updateOrderStatus(): void {
+    this.orderService.updateOrderStatus(this.orderId, this.newStatus);
+   
+    
+}
 
-  updateOrderStatus(newStatus: string): void {
-    this.orderService.updateOrderStatus(this.orderId, newStatus);
-  }
   
 
   deleteOrder(): void {

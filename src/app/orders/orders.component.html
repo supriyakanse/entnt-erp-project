@@ -1,29 +1,26 @@
 <!-- order-list.component.html -->
 
-<h2>Orders</h2>
+<div class="order-list-container">
+  <h2 class="order-list-heading">Orders</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Order ID</th>
-      <th>Customer Name</th>
-      <th>Order Date</th>
-      <th>Status</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let order of orders">
-      <td>{{ order.id }}</td>
-      <td>{{ order.customerName }}</td>
-      <td>{{ order.orderDate | date:'medium' }}</td>
-      <td>{{ order.status }}</td>
-      <td><button (click)="viewOrderDetails(order.id)">View Details</button></td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-<!-- order-detail.component.html -->
-
+  <table class="order-table">
+      <thead>
+          <tr>
+              <th>Order ID</th>
+              <th>Customer Name</th>
+              <th>Order Date</th>
+              <th>Status</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let order of orders">
+              <td>{{ order.id }}</td>
+              <td>{{ order.customerName }}</td>
+              <td>{{ order.orderDate | date:'medium' }}</td>
+              <td>{{ order.status }}</td>
+              <td class="order-actions"><button (click)="viewOrderDetails(order.id)">View Details</button></td>
+          </tr>
+      </tbody>
+  </table>
+</div>

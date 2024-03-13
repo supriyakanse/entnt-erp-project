@@ -1,23 +1,30 @@
 <!-- product-add.component.html -->
 
-<h2>Add New Product</h2>
+<div class="product-add-container">
+<app-nav-bar></app-nav-bar>
+  <h2 class="product-add-heading">Add New Product</h2>
 
-<div>
-  <label for="name">Name:</label>
-  <input id="name" [(ngModel)]="newProduct.name" placeholder="Name" required/>
-</div>
-<div>
-  <label for="category">Category:</label>
-  <input id="category" [(ngModel)]="newProduct.category" placeholder="Category" required/>
-</div>
-<div>
-  <label for="price">Price:</label>
-  <input id="price" [(ngModel)]="newProduct.price" placeholder="Price" required/>
-</div>
-<div>
-  <label for="stockQuantity">Stock Quantity:</label>
-  <input id="stockQuantity" [(ngModel)]="newProduct.stockQuantity" placeholder="Stock Quantity" required/>
-</div>
+  <div class="product-form">
+      <div>
+          <label for="name">Name:</label>
+          <input id="name" [(ngModel)]="newProduct.name" placeholder="Name" required />
+      </div>
+      <div>
+          <label for="category">Category:</label>
+          <input id="category" [(ngModel)]="newProduct.category" placeholder="Category" required />
+      </div>
+      <div>
+          <label for="price">Price:</label>
+          <input id="price" [(ngModel)]="newProduct.price" placeholder="Price" required />
+      </div>
+      <div>
+          <label for="stockQuantity">Stock Quantity:</label>
+          <input id="stockQuantity" [(ngModel)]="newProduct.stockQuantity" placeholder="Stock Quantity" required />
+      </div>
+  </div>
 
-<button (click)="addProduct()">Add Product</button>
-<button routerLink="/products">Cancel</button>
+  <div class="product-actions">
+      <button (click)="addProduct()">Add Product</button>
+      <button routerLink="/products">Cancel</button>
+  </div>
+</div>

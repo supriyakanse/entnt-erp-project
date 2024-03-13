@@ -1,0 +1,59 @@
+/* product-detail.styles.css */
+
+.product-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-heading {
+    color: #3498db;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product-form label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.product-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.product-actions button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.product-actions button:last-child {
+    background-color: #e74c3c;
+}
+
+.product-actions button:hover {
+    background-color: #217dbb; /* Hover color for Update button */
+}
+
+.product-actions button:last-child:hover {
+    background-color: #c0392b; /* Hover color for Delete button */
+}
