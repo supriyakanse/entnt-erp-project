@@ -1,27 +1,82 @@
-# ErpProject
+# Angular CRUD Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+This Angular application provides a simple CRUD (Create, Read, Update, Delete) functionality for managing products and orders.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Services](#services)
+- [Routing](#routing)
+- [License](#license)
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before running the application, make sure you have the following installed:
 
-## Build
+- [Node.js](https://nodejs.org/) - JavaScript runtime (comes with npm)
+- [Angular CLI](https://cli.angular.io/) - Command Line Interface for Angular applications
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+1. Clone the repository:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    git clone https://github.com/supriyakanse/entnt-erp-project.git
+    ```
 
-## Running end-to-end tests
+2. Navigate to the project directory:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    cd your-angular-app
+    ```
 
-## Further help
+3. Install dependencies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+1. Start the development server:
+
+    ```bash
+    ng serve
+    ```
+
+2. Open your browser and navigate to [http://localhost:4200/](http://localhost:4200/).
+
+3. Explore the dashboard, product list, and order list pages.
+
+## Components
+
+- **Dashboard Component:** Displays a summary of key metrics, including total products and orders.
+
+- **Product List Component:** Lists all products with details such as ID, name, category, price, and stock quantity. Allows users to view product details and delete products.
+
+- **Order List Component:** Displays a list of orders with details like order ID, customer name, order date, and status. Enables users to view order details.
+
+- **Product Detail Component:** Shows detailed information about a specific product, including the option to update and delete the product.
+
+- **Order Detail Component:** Displays detailed information about a specific order, with the ability to update the order status and delete the order.
+
+- **Product Add Component:** Allows users to add a new product with details such as name, category, price, and stock quantity.
+
+## Services
+
+- **Product Service:** Manages product data, including fetching, adding, updating, and deleting products.
+
+- **Order Service:** Handles order-related functionalities, such as fetching, updating order status, and deleting orders.
+
+## Routing
+
+- The application uses Angular Router for navigation between components.
+
+- Available routes include `/dashboard`, `/products`, `/orders`, `/products/:id` (product detail), `/orders/:id` (order detail), and `/products/new` (add new product).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
