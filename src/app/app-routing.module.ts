@@ -6,11 +6,12 @@ import { OrdersComponent } from './orders/orders.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'products', component: ProductComponent },
-  { path: 'products/:id', component: ProductDetailComponent },
+  { path: 'products/:id', component: ProductDetailComponent,canActivate:[authGuard] },
   { path:  'add',component:ProductAddComponent},
   { path: 'orders', component: OrdersComponent },
   { path: 'orders/:id', component: OrderDetailComponent },

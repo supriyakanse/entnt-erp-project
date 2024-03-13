@@ -20,6 +20,7 @@ export class ProductAddComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
+    localStorage.setItem('isValidProductAdd', 'true');
     this.productForm = this.formBuilder.group({
       name: ['', Validators.required], 
       category: ['', Validators.required],
